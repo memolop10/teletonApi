@@ -26,6 +26,11 @@ const parsersMap = [
 
 
 module.exports = ( router ) => {
+  
+  router.get('/', ctx => {
+    ctx.body = 'API - teleton - hack - <kegs@/>'
+  })
+
   router.post('/file', async ctx => {
     const { request } = ctx
     const { files } = request
